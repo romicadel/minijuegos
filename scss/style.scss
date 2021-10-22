@@ -1,0 +1,521 @@
+$fontFamily: 'Rampart One', cursive;;
+$background: linear-gradient(rgb(24, 23, 23), rgb(66, 65, 65));
+$fontSizeBig: calc(1em + 4vw);
+$standardp: 20px;
+
+
+@keyframes aparecer{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+body{
+    background: linear-gradient(rgb(33, 31, 31), black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    #objeto3d:hover {
+        transform: rotateY(150deg);
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .logo{
+        width: 70px;
+    }
+}
+@media only screen and (min-width: 380px) and (max-width: 990px) {
+    .logo{
+        width: 80px;
+    }
+}
+@media only screen and (min-width: 990px) {
+    .logo{
+        width: 120px;
+    }
+}
+.logo{
+    transition: scale(2,2);
+}
+.logo:hover{
+    transform: scale(1.2,1.2);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(223, 204, 2);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    input:checked + .slider {
+        background-color: rgb(28, 27, 27);
+    }
+    
+    input:focus + .slider {
+        box-shadow: 0 0 1px #232526;
+    }
+    
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    
+      /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+}
+
+
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    color: grey;
+    background: rgb(82, 81, 81);
+    padding: 15px;
+    grid-area: footer;
+    .form{
+        display: inline-flex;
+    }
+}
+.icon-bar {
+    display: inline;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: grey;
+}
+
+
+@media only screen and (max-width: 340px) {
+    h1{
+        font-weight: 800;
+        font-size:($fontSizeBig + 6em);
+    }
+    h2{
+        font-weight: 400;
+        font-size: ($fontSizeBig - 3em);
+    }
+    h3{
+        font-weight: 200;
+        font-size: ($fontSizeBig - 4em);
+    }
+    p{
+        font-weight: 300;
+        font-size: ($fontSizeBig - 5em);
+    }
+}
+
+
+h1{
+    color:whitesmoke; 
+    font-size: $fontSizeBig; 
+    font-family: $fontFamily;
+    text-transform: capitalize;
+    font-style: bold;
+    }
+h2{
+    color:whitesmoke; 
+    font-size: calc(1em + 3vw) ; 
+    font-weight: 700;
+    font-family: $fontFamily;
+    font-weight: bold;
+}
+
+p{
+    color: whitesmoke;
+    font-size: $standardp; 
+    font-weight: 300;
+    font-family: $fontFamily;
+}
+
+/*----------------efectos--------------*/
+
+.animate__slideInUp{
+    animation-delay: 1s;
+    animation-duration: 2s;
+}
+
+//paginas juegos
+
+.section{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5vw;
+    margin-top: 5vh;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+.button{
+    color: rgba(255, 225, 0, 0.842);
+    background-color: rgb(184, 13, 184);
+    border: 10px;
+    border-color: rgba(255, 225, 0, 0.842);
+    border-radius: 10%;
+    font-family: $fontFamily; 
+    font-size: 50px;
+    width: 300px;
+    padding: 30px;
+    margin: 20px;
+    align-self: center;
+}
+.button:hover, a:active {
+    color: rgb(184, 13, 184);
+    background-color:rgba(255, 225, 0, 0.842);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+    text-shadow: 0px 0px 6px lightgrey ;
+}
+
+
+@for $i from 1 through 3 {
+    #highlight#{$i}{
+        font-size: ($standardp) * 2 ;
+        font-weight: bolder;
+    }
+}
+
+/*----------------------- Contacto -------------------*/
+@media (max-width: 375px) {
+    iframe{
+        width: 200px;
+        height: auto;
+    }
+    .find-widget{
+        margin-left: 10px;
+        padding-left: 10px;
+        padding-bottom: 20px;
+    }
+}
+.find-widget{
+    font-family: $fontFamily;
+    font-size: 16px;
+    color: white;
+    padding-left: 3em;
+    margin-top: 2em;
+    justify-content: center;
+}
+.section-title{
+    float: right;
+    padding-top: 10px;
+
+}
+.contact-form{
+    padding-top: 2em;
+    align-items: right;
+}
+
+/*----------------------- Registro -------------------*/
+/*--------- Card ----------*/
+
+.card{
+    background: #FFFFFF;
+    box-shadow: 0px 2.88889px 8.66667px rgba(0, 0, 0, 0.25);
+    border-radius: 7.22223px;  
+    width: 23rem;
+    height: fit-content;
+    .card-title{
+        color: blueviolet; 
+        font-size: 30px;
+        padding: 0.5em;
+    }
+    .text-center___text{
+        color: grey;
+        padding: 5px;
+    }
+    .textEnd{
+        display: inline;
+        color: grey;
+        font-size: 14px;
+    }
+    
+    .socialR{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        .btnLog{
+            background-color: rgb(240, 239, 239);
+            border: grey;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+        }
+        .btnLog:hover{
+            box-shadow: 1px 3.01656px 7.5414px rgba(46, 46, 46, 0.406);
+        }
+    }
+    .divider-text {
+        position: relative;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: grey;
+        
+    }
+    .divider-text__span {
+        padding: 7px;
+        font-size: 12px;
+        position: relative;  
+        z-index: 2;
+    }
+    .divider-text:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        top: 55%;
+        left: 0;
+        z-index: 0;
+    }
+    .form-control-text{
+        margin: 0px;
+    }
+    .fa-user{
+        padding: auto;
+    }
+    .form-group{
+        height:38px ;
+    } 
+    .input-group{
+        height:38px ;
+    }
+}
+
+/*----------------------- 404 -------------------*/
+
+//hangman
+/* Variabes */  
+$orange: #ffa600;
+$blue: #82d2e5;
+$grey:#f3f3f3;
+$white: #fff;
+
+/* Mixin's */ 
+
+@mixin transition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin clear {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin box-size {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin transition {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin fade {
+    -moz-transition: all 1s ease-in;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+@mixin opacity {
+    opacity:0.4;
+    filter:alpha(opacity=40); 
+    @include fade;
+}
+
+@mixin corners ($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius; 
+    -khtml-border-radius: $radius; 
+}
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    color:$white;
+    height:100%;
+    text-align:center;
+    font-size:18px;
+}
+
+.wrappper{
+    @include clear;
+    width:100%;
+    margin:0 auto;
+}
+
+
+canvas{
+    color:$white;
+    border: $white dashed 2px;
+    padding:15px;
+}
+
+
+h1 {
+	font-size: 2.6em;
+}
+
+h2 {
+	font-size: 1.6em;
+}
+
+p{
+    font-size: 1.6em;
+}
+
+#alphabet {
+    @include clear;
+    margin:15px auto;
+    padding:0;
+    max-width:900px;
+}
+
+#alphabet li {
+    float:left;
+    margin: 0 10px 10px 0;
+    list-style:none;
+    width:35px;
+    height:30px;
+    padding-top:10px;
+    background:$white;
+    cursor:pointer;
+    @include corners(5px);
+    border: solid 1px $white;
+    
+    &:hover{
+        border: solid 1px $white;
+        color:$white;
+    }
+}
+
+#my-word {
+    background: whitesmoke;
+    color: black;
+    margin: 0;
+    display: block;
+    padding: 0;
+    display:block;
+}
+
+#my-word li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    padding: 0 10px;
+    font-size:1.6em;
+}
+
+.active {
+    @include opacity;
+    cursor:default;
+    
+    &:hover{
+        @include fade;
+        @include opacity;
+    }
+}
+
+#mylives{
+    font-size:1.6em;
+    text-align:center;
+    display:block;
+}
+
+button{
+    @include corners (5px);
+    color:$white;
+    border: solid 1px $white;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:1.2em;
+    padding:18px 10px;
+    width:180px;
+    margin: 10px;
+    outline: none;
+
+    &:hover{
+        @include transition;
+        background:$white;
+        border: solid 1px $white;
+    }
+}
+
+@media (max-width: 767px) {
+    #alphabet {
+    padding:0 0 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+#alphabet {
+padding:0 0 0 25px;
+    }
+}
+
+//Ta te ti
+
+.buttonT{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(63, 63, 63);
+}
+.containerF{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 600px;
+    margin: auto;
+}
+
+.texto{
+    font: $fontFamily;
+    color:rgb(17, 16, 16);
+    font-size: 50px;
+    background: whitesmoke;
+}
