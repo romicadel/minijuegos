@@ -1,0 +1,108 @@
+
+/*----------------------- Contacto -------------------*/
+@media (max-width: 375px) {
+    iframe{
+        width: 200px;
+        height: auto;
+    }
+    .find-widget{
+        margin-left: 10px;
+        padding-left: 10px;
+        padding-bottom: 20px;
+    }
+}
+.find-widget{
+    font-family: $fontFamily;
+    font-size: 16px;
+    color: white;
+    padding-left: 3em;
+    margin-top: 2em;
+    justify-content: center;
+}
+.section-title{
+    float: right;
+    padding-top: 10px;
+
+}
+.contact-form{
+    padding-top: 2em;
+    align-items: right;
+}
+
+/*----------------------- Registro -------------------*/
+/*--------- Card ----------*/
+
+.card{
+    background: #FFFFFF;
+    box-shadow: 0px 2.88889px 8.66667px rgba(0, 0, 0, 0.25);
+    border-radius: 7.22223px;  
+    width: 23rem;
+    height: fit-content;
+    .card-title{
+        color: blueviolet; 
+        font-size: 30px;
+        padding: 0.5em;
+    }
+    .text-center___text{
+        color: grey;
+        padding: 5px;
+    }
+    .textEnd{
+        display: inline;
+        color: grey;
+        font-size: 14px;
+    }
+    
+    .socialR{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        .btnLog{
+            background-color: rgb(240, 239, 239);
+            border: grey;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+        }
+        .btnLog:hover{
+            box-shadow: 1px 3.01656px 7.5414px rgba(46, 46, 46, 0.406);
+        }
+    }
+    .divider-text {
+        position: relative;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: grey;
+        
+    }
+    .divider-text__span {
+        padding: 7px;
+        font-size: 12px;
+        position: relative;  
+        z-index: 2;
+    }
+    .divider-text:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        top: 55%;
+        left: 0;
+        z-index: 0;
+    }
+    .form-control-text{
+        margin: 0px;
+    }
+    .fa-user{
+        padding: auto;
+    }
+    .form-group{
+        height:38px ;
+    } 
+    .input-group{
+        height:38px ;
+    }
+}

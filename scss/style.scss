@@ -1,0 +1,204 @@
+$fontFamily: 'Rampart One', cursive;;
+$background: linear-gradient(rgb(24, 23, 23), rgb(66, 65, 65));
+$fontSizeBig: calc(1em + 4vw);
+$standardp: 20px;
+
+@import "pares";
+@import "gameboy";
+@import "hangman";
+@import "tateti";
+
+
+body{
+    background: linear-gradient(rgb(33, 31, 31), black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 380px) {
+    .logo{
+        width: 70px;
+    }
+}
+@media only screen and (min-width: 380px) and (max-width: 990px) {
+    .logo{
+        width: 80px;
+    }
+}
+@media only screen and (min-width: 990px) {
+    .logo{
+        width: 120px;
+    }
+}
+.logo{
+    transition: scale(2,2);
+}
+.logo:hover{
+    transform: scale(1.2,1.2);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(223, 204, 2);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    input:checked + .slider {
+        background-color: rgb(28, 27, 27);
+    }
+    
+    input:focus + .slider {
+        box-shadow: 0 0 1px #232526;
+    }
+    
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    
+      /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+}
+
+
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    color: grey;
+    background: rgb(82, 81, 81);
+    padding: 15px;
+    grid-area: footer;
+    .form{
+        display: inline-flex;
+    }
+}
+.icon-bar {
+    display: inline;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: grey;
+}
+
+
+@media only screen and (max-width: 340px) {
+    h1{
+        font-weight: 800;
+        font-size:($fontSizeBig + 6em);
+    }
+    h2{
+        font-weight: 400;
+        font-size: ($fontSizeBig - 3em);
+    }
+    h3{
+        font-weight: 200;
+        font-size: ($fontSizeBig - 4em);
+    }
+    p{
+        font-weight: 300;
+        font-size: ($fontSizeBig - 5em);
+    }
+}
+
+
+h1{
+    color:whitesmoke; 
+    font-size: $fontSizeBig; 
+    font-family: $fontFamily;
+    text-transform: capitalize;
+    font-style: bold;
+    }
+h2{
+    color:whitesmoke; 
+    font-size: calc(1em + 3vw) ; 
+    font-weight: 700;
+    font-family: $fontFamily;
+    font-weight: bold;
+}
+
+p{
+    color: whitesmoke;
+    font-size: $standardp; 
+    font-weight: 300;
+    font-family: $fontFamily;
+}
+
+/*----------------efectos--------------*/
+
+.animate__slideInUp{
+    animation-delay: 1s;
+    animation-duration: 2s;
+}
+
+//paginas juegos
+
+.container1{
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2vw;
+    margin-top: 2vh;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    padding-bottom: 65vh;
+}
+.button{
+    color: rgba(255, 225, 0, 0.842);
+    text-decoration: none;
+    background-color: rgb(184, 13, 184);
+    border: 10px;
+    border-color: rgba(255, 225, 0, 0.842);
+    border-radius: 10%;
+    font-family: $fontFamily; 
+    font-size: 35px;
+    width: fit-content;
+    padding: 30px;
+    margin: 20px;
+    align-self: center;
+    box-shadow: 0 8px 16px 0 rgba(220, 112, 230, 0.2), 0 6px 20px 0 rgba(149, 76, 155, 0.19);
+}
+.button:hover, a:active {
+    color: rgb(184, 13, 184);
+    background-color:rgba(255, 225, 0, 0.947);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+    text-shadow: 0px 0px 6px lightgrey ;
+}
+
