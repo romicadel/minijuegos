@@ -7,6 +7,7 @@ $standardp: 20px;
 @import "gameboy";
 @import "hangman";
 @import "tateti";
+@import "drag&drop";
 
 
 body{
@@ -170,7 +171,6 @@ p{
 //paginas juegos
 
 .container1{
-    height: auto;
     display: flex;
     flex-flow: row wrap;
     padding: 2vw;
