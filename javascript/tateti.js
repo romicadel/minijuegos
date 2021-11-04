@@ -1,10 +1,12 @@
+
+
 let turno = 0;
 const tablero = [];
 
 const btnPulsado = (e, pos) => {
     turno ++; 
     const btn = e.target;
-    const color = turno % 2 ? 'blueviolet' : 'yellow';
+    const color = turno % 2 ? 'purple' : 'yellow';
     btn.style.backgroundColor =  color;
     tablero[pos] = color;
     if(haGanado())alert('Felicidades '+ color);
@@ -31,9 +33,23 @@ const haGanado = () => {
         return false;
     }
 }
+
 document.querySelectorAll('button').forEach(
     (obj, i) => obj.addEventListener ('click', (e) => btnPulsado (e,i))
 );
+
+btnPulsado.addEventListener('click', () => {
+    $("tablero").reset();
+})
+
+//JSON
+
+const guardarLocal = (valor) => { localStorage.setItem(valor)}
+
+for (const tablero of tablero ){
+    guardarLocal(producto.id, JSON.stringify(tablero))
+}
+guardarLocal("tablero", JSON.stringify(tablero))
 
 /*document.getElementById("reset").onclick = btnPulsado () {
     color.parentNode.removeChild();

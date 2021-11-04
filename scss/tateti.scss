@@ -1,20 +1,14 @@
 //Ta te ti
 
-#btn{
+.btn{
     width: 200px;
     height: 200px;
-    background-color: rgb(20, 163, 179);
+    background-color: rgb(19, 18, 18);
 }
+
 #tablero{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 600px;
     margin: auto;
-}
-
-.texto{
-    font: $fontFamily;
-    color:rgb(17, 16, 16);
-    font-size: 50px;
-    background: whitesmoke;
 }

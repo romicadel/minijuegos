@@ -13,7 +13,7 @@ opened = [],
 		rank2stars = gameCardsQTY + 6,
 		rank1stars = gameCardsQTY + 10;
 
-// Shuffle function From http://stackoverflow.com/a/2450976
+
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {

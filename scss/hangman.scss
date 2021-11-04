@@ -1,5 +1,5 @@
 //hangman
-/* Variabes */  
+
 $orange: #ffa600;
 $blue: #82d2e5;
 $grey:#f3f3f3;
@@ -54,7 +54,7 @@ $white: #fff;
 
 body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    color:$white;
+    color:rgb(19, 18, 18);
     height:100%;
     text-align:center;
     font-size:18px;
@@ -63,7 +63,7 @@ body {
 .wrappper{
     @include clear;
     width:100%;
-    margin:0 auto;
+
 }
 
 
