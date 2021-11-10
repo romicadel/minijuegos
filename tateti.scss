@@ -1,0 +1,14 @@
+//Ta te ti
+
+#btn1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(20, 163, 179);
+}
+
+#tablero{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 600px;
+    margin: auto;
+}
