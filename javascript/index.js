@@ -39,3 +39,21 @@ if(localStorage.getItem('dark-mode') === 'true'){
 	document.body.classList.remove('dark');
 	btnSwitch.classList.remove('active');
 }
+
+$("#boton1").click(() => { 
+    $("#contenidoExtra").toggle("fast");
+});
+
+$(".button1").css({ "background-color": "#13121200", 
+					"color": "black",
+                    "font-size": "40px", 
+					"font-family": "rampart one",
+					"width": "fit-content",
+					"margin-bottom": "30px",
+					"opacity": "0",
+                    "border": "none"});
+
+$("#boton1").css("opacity", "1")
+		.slideUp(2000)
+		.delay(2000)
+		.slideDown(1000);

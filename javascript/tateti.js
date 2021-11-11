@@ -42,6 +42,8 @@ btnPulsado.addEventListener('click', () => {
     $("tablero").reset();
 })
 
+//$("#reset").click(function();})
+
 //JSON
 
 const guardarLocal = (valor) => { localStorage.setItem(valor)}
