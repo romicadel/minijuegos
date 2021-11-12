@@ -82,10 +82,16 @@ body {
     display: table;
     clear: both; }
 
+.div1 {
+  display: flex;
+  justify-content: flex-end; }
+
 canvas {
   color: #fff;
   border: #fff dashed 2px;
-  padding: 15px; }
+  padding: 15px;
+  align-items: center;
+  justify-content: center; }
 
 h1 {
   font-size: 2.6em; }
@@ -344,12 +350,20 @@ canvas {
 .btn {
   width: 200px;
   height: 200px;
-  background-color: #131212; }
+  background-color: #302c2c;
+  border: none; }
+  .btn :hover {
+    background: grey;
+    border: none;
+    box-shadow: rgba(170, 170, 170, 0.767); }
+  .btn .active {
+    border: none;
+    box-shadow: grey; }
 
 #tablero {
   display: grid;
+  width: fit-content;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 600px;
   margin: auto; }
 
 * {

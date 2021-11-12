@@ -66,11 +66,17 @@ body {
 
 }
 
+.div1{
+    display: flex;
+    justify-content: flex-end;
+}
 
 canvas{
     color:$white;
     border: $white dashed 2px;
     padding:15px;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -175,3 +181,4 @@ button{
 padding:0 0 0 25px;
     }
 }
+

@@ -6,7 +6,7 @@ const tablero = [];
 const btnPulsado = (e, pos) => {
     turno ++; 
     const btn = e.target;
-    const color = turno % 2 ? 'purple' : 'yellow';
+    const color = turno % 2 ? 'hotpink' : 'yellow';
     btn.style.backgroundColor =  color;
     tablero[pos] = color;
     if(haGanado())alert('Felicidades '+ color);
@@ -38,11 +38,11 @@ document.querySelectorAll('button').forEach(
     (obj, i) => obj.addEventListener ('click', (e) => btnPulsado (e,i))
 );
 
-btnPulsado.addEventListener('click', () => {
+/*btnPulsado.addEventListener('click', () => {
     $("tablero").reset();
 })
 
-//$("#reset").click(function();})
+//$("reset").click(removeAllListeners())*/
 
 //JSON
 

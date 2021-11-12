@@ -3,12 +3,22 @@
 .btn{
     width: 200px;
     height: 200px;
-    background-color: rgb(19, 18, 18);
+    background-color: rgb(48, 44, 44);
+    border: none;
+    :hover{
+        background: grey;
+        border: none ;
+        box-shadow: rgba(170, 170, 170, 0.767);
+    }
+    .active{
+        border: none;
+        box-shadow: grey;
+    }
 }
 
 #tablero{
     display: grid;
+    width: fit-content;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 600px;
     margin: auto;
 }
