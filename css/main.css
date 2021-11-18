@@ -90,7 +90,6 @@ canvas {
   color: #fff;
   border: #fff dashed 2px;
   padding: 15px;
-  align-items: center;
   justify-content: center; }
 
 h1 {
@@ -208,13 +207,6 @@ body {
   font-size: 20px;
   color: #555; }
 
-canvas {
-  cursor: move;
-  display: block;
-  position: absolute;
-  max-width: 100%;
-  left: 0;
-  top: 0; }
 
 .is-cub-hovered,
 .is-cub-hovered canvas {
@@ -437,10 +429,11 @@ body {
 .container1 {
   display: flex;
   flex-flow: row wrap;
-  padding: 5%;
-  margin-top: 5%;
-  align-content: space-between;
-  padding-bottom: 30%; }
+  padding: 2%;
+  margin-top: 2%;
+  margin-bottom: 40%;
+  margin-right: 30%;
+  justify-content: space-around; }
 
 .button {
   color: whitesmoke;
