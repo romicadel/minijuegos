@@ -35,7 +35,7 @@ btnSwitch.addEventListener('click', () => {
 if(localStorage.getItem('dark-mode') === 'true'){
 	document.body.classList.add('dark');
 	btnSwitch.classList.add('active');
-} else {
+}else {
 	document.body.classList.remove('dark');
 	btnSwitch.classList.remove('active');
 }
@@ -57,3 +57,40 @@ $("#boton1").css("opacity", "1")
 		.slideUp(2000)
 		.delay(2000)
 		.slideDown(1000);
+
+
+
+//Buscador//
+const juegos = [
+	{nombre: 'Ta te ti'},
+	{nombre: 'Ahorcado'},
+]
+
+const formulario = document.querySelector("#formulario");
+const boton = document.querySelector("#btn2");
+const resultado = document.querySelector('#resultado')
+
+const filtrar = ()=>{
+	//console.log(formulario.value);
+	resultado.innerHTML = '';
+
+	const texto = formulario.value.toLowerCase();
+
+	for(let juego of juegos){
+		let nombre = juego.nombre.toLowerCase();
+		if(nombre.indexOf(texto) !== -1){
+			resultado.innerHTML +=`
+			<li>${juego.nombre}</li>
+			`
+		}
+	}
+	if (resultado.innerHTML === ''){
+		resultado.innerHTML += `
+		<li>Todavia no tenemos ese juego</li>
+		`
+	}
+}
+
+boton.addEventListener('click', filtrar)
+formulario.addEventListener('keyup', filtrar)
+filtrar();

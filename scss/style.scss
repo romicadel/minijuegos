@@ -4,9 +4,7 @@ $backgroundlight: linear-gradient((rgb(245, 81, 254)),(yellow));
 $standardp: 20px;
 $blanco:rgba(255, 255, 255, 0.208) ;
 
-@import "pares";
 @import "hangman";
-@import "draganddrop";
 @import "tateti";
 
 * {
@@ -80,7 +78,6 @@ body{
     transition: .3s ease all;
     &.dark{
         background: $background;
-        font-style: whitesmoke;
     }
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,6 +151,9 @@ h2{
     font-weight: 700;
     font-family: $fontFamily;
     font-weight: bold;
+    &.dark{
+        color: whitesmoke;
+    }
 }
 
 p{
@@ -161,6 +161,9 @@ p{
     font-size: $standardp; 
     font-weight: 300;
     font-family: $fontFamily;
+    &.dark{
+        color: whitesmoke;
+    }
 }
 
 
