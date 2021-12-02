@@ -146,6 +146,61 @@ button {
   margin: auto;
   padding-bottom: 5%; }
 
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+.bodyFlappy {
+  background: lightblue;
+  margin: o;
+  overflow: hidden; }
+
+.title {
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  margin: 0;
+  flex-direction: column; }
+
+.subtitle {
+  margin-top: .5rem; }
+
+.hide {
+  display: none; }
+
+.bird {
+  --bird-top: -1000;
+  --bird-size: 60px;
+  position: absolute;
+  background-color: yellow;
+  width: var(--bird-size);
+  height: var(--bird-size);
+  left: var(--bird-size);
+  top: calc(var(--bird-top) * 1px);
+  border-radius: 50%; }
+
+.pipe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(var(--pipe-width) * 1px);
+  left: calc(var(--pipe-left) * 1px); }
+
+.pipe > .segment {
+  position: absolute;
+  width: 100%;
+  background-color: greenyellow; }
+
+.pipe > .top {
+  top: 0;
+  bottom: calc(var(--hole-top) * 1px); }
+
+.pipe > .bottom {
+  bottom: 0;
+  top: calc(100vh - (var(--hole-top) * 1px) + calc(var(--hole-height) * 1px)); }
+
 * {
   padding: 0;
   margin: 0;
@@ -206,21 +261,26 @@ nav {
 
 body {
   background: linear-gradient(#f551fe, yellow);
-  transition: .3s ease all;
+  transition: .4s ease all;
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden; }
   body.dark {
-    background: linear-gradient(#181717, #f551fe); }
+    background: linear-gradient(#181717, #f551fe);
+    color: whitesmoke; }
 
 .container1 {
   display: flex;
   flex-flow: row wrap;
   padding: 2%;
   margin-top: 2%;
-  margin-bottom: 40%;
+  margin-bottom: 20%;
   margin-right: 30%;
   justify-content: space-around; }
+
+.containerSub {
+  display: flex;
+  flex-flow: row wrap; }
 
 .button {
   color: whitesmoke;
@@ -265,7 +325,7 @@ h1 {
   text-transform: capitalize;
   font-style: bold;
   padding-top: 1em; }
-  h1.dark {
+  h1 .darkmode {
     color: whitesmoke; }
 
 h2 {
@@ -274,7 +334,7 @@ h2 {
   font-weight: 700;
   font-family: "Rampart One", cursive;
   font-weight: bold; }
-  h2.dark {
+  h2 .darkmode {
     color: whitesmoke; }
 
 p {
@@ -282,8 +342,6 @@ p {
   font-size: 20px;
   font-weight: 300;
   font-family: "Rampart One", cursive; }
-  p.dark {
-    color: whitesmoke; }
 
 @media only screen and (max-width: 380px) {
   .logo {

@@ -4,8 +4,9 @@ $backgroundlight: linear-gradient((rgb(245, 81, 254)),(yellow));
 $standardp: 20px;
 $blanco:rgba(255, 255, 255, 0.208) ;
 
-@import "hangman";
-@import "tateti";
+@import "./hangman.scss";
+@import "./tateti.scss";
+@import "./flappybird.scss";
 
 * {
 	padding: 0;
@@ -62,6 +63,7 @@ nav {
         }
     }
 }
+
 .buttonSearch{
     background: greenyellow;
     height: auto;
@@ -75,9 +77,10 @@ nav {
 
 body{
     background: $backgroundlight;
-    transition: .3s ease all;
+    transition: .4s ease all;
     &.dark{
         background: $background;
+        color: whitesmoke;
     }
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,9 +92,13 @@ body{
     flex-flow: row wrap;
     padding: 2%;
     margin-top: 2%;
-    margin-bottom: 40%;
+    margin-bottom: 20%;
     margin-right: 30%;
     justify-content: space-around;
+}
+.containerSub{
+    display: flex;
+    flex-flow: row wrap;
 }
 .button{
     color: whitesmoke;
@@ -140,7 +147,7 @@ h1{
     text-transform: capitalize;
     font-style: bold;
     padding-top: 1em;
-    &.dark{
+    .darkmode{
         color: whitesmoke;
     }
 }
@@ -151,7 +158,7 @@ h2{
     font-weight: 700;
     font-family: $fontFamily;
     font-weight: bold;
-    &.dark{
+    .darkmode{
         color: whitesmoke;
     }
 }
@@ -161,9 +168,6 @@ p{
     font-size: $standardp; 
     font-weight: 300;
     font-family: $fontFamily;
-    &.dark{
-        color: whitesmoke;
-    }
 }
 
 

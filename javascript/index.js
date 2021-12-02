@@ -24,11 +24,11 @@ const btnSwitch = document.querySelector('#switch');
 btnSwitch.addEventListener('click', () => {
 	document.body.classList.toggle('dark');
 	btnSwitch.classList.toggle('active');
-    
-	if(document.body.classList.contains('dark')){
-		localStorage.setItem('dark-mode', 'true');
+	
+	if (document.body.classList.contains('dark')){
+		localStorage.setItem('dark', 'true');
 	} else {
-		localStorage.setItem('dark-mode', 'false');
+		localStorage.setItem('dark', 'false');
 	}
 });
 
@@ -39,6 +39,7 @@ if(localStorage.getItem('dark-mode') === 'true'){
 	document.body.classList.remove('dark');
 	btnSwitch.classList.remove('active');
 }
+
 
 $("#boton1").click(() => { 
     $("#contenidoExtra").toggle("fast");
@@ -51,7 +52,11 @@ $(".button1").css({ "background-color": "#13121200",
 					"width": "fit-content",
 					"margin-bottom": "30px",
 					"opacity": "0",
-                    "border": "none"});
+                    "border": "none"
+});
+
+$(".button1dark").css({"color": "whitesmoke",
+});
 
 $("#boton1").css("opacity", "1")
 		.slideUp(2000)
@@ -64,6 +69,7 @@ $("#boton1").css("opacity", "1")
 const juegos = [
 	{nombre: 'Ta te ti'},
 	{nombre: 'Ahorcado'},
+	{nombre: 'Flappy Bird'},
 ]
 
 const formulario = document.querySelector("#formulario");
