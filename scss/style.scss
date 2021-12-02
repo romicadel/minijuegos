@@ -147,7 +147,7 @@ h1{
     text-transform: capitalize;
     font-style: bold;
     padding-top: 1em;
-    .darkmode{
+    .dark{
         color: whitesmoke;
     }
 }
@@ -158,7 +158,7 @@ h2{
     font-weight: 700;
     font-family: $fontFamily;
     font-weight: bold;
-    .darkmode{
+    .dark{
         color: whitesmoke;
     }
 }
@@ -168,6 +168,9 @@ p{
     font-size: $standardp; 
     font-weight: 300;
     font-family: $fontFamily;
+    .dark{
+        color: whitesmoke;
+    }
 }
 
 

@@ -32,7 +32,7 @@ btnSwitch.addEventListener('click', () => {
 	}
 });
 
-if(localStorage.getItem('dark-mode') === 'true'){
+if(localStorage.getItem('dark') === 'true'){
 	document.body.classList.add('dark');
 	btnSwitch.classList.add('active');
 }else {
